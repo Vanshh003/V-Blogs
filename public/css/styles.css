@@ -1,0 +1,108 @@
+.navbar .container {
+    padding-right: 0;
+}
+.contain{
+    text-align: end;
+} 
+body{
+    overflow: visible;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+	height: 60px;
+	background-color: #1abc9c;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: #f8f8f8;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar a{
+    color: #777;
+}
+.navbar-brand:focus, .navbar-brand:hover{
+    color: rgb(36, 33, 33);
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+    background-color: white;
+}
+
+footer p {
+	margin-top: 22px;
+	font-size: 12px;
+    color: #fff;
+} 
+
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.post-container:last-child {
+    margin-bottom: 0;
+}
+
+.post-container:hover {
+    background-color: #f0f0f0;
+}
+
+.dots {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.post-container:hover .dots {
+    display: inline-block;
+}
+
+.delete-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dots:hover .delete-menu {
+    display: block;
+}
+
+.delete-menu button {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-menu button:hover {
+    opacity: 0.8;
+}
