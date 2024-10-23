@@ -61,6 +61,29 @@ app.get("/", async (req, res) => {
   
 
 
+// Home route
+app.get("/admin/:password", async (req, res) => {
+  if(req.params.password && req.params.password === process.env.PASSWORD) {
+    try {
+      const foundHomeContent = await Content.findOne({ title: "Home" });
+      const allPosts = await Post.find({});
+      res.render("home_admin.ejs", {
+        startingContentHome: foundHomeContent.content,
+        allposts: allPosts
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  else {
+    res.render("unauthorisedAccess.ejs");
+  }
+});
+
+
+
+
+
 // About route
 app.get("/about", async (req, res) => {
     try {
